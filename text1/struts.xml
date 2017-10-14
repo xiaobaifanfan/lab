@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="test" extends="struts-default" namespace="/">
+
+	<action name="login" class="com.food.action.LoginAction" method="login">
+			<result type="redirect">showAllFoods.action</result>
+			<result name="input">/login.jsp</result>
+	</action>
+	<action name="showAllFoods" class="com.food.action.FoodAction" method="showAllFoods">
+			<result name="success">/admin/manageFood.jsp</result>
+			<result name="input">/login.jsp</result>
+	</action>
+	<action name="addFood" class="com.food.action.FoodAction" method="addFood">
+			<result type="redirect">showAllFoods.action</result>
+			<result name="input">/login.jsp</result>
+	</action>
+	<action name="delete" class="com.food.action.FoodAction" method="deleteFood">
+			<result type="redirect">showAllFoods.action</result>
+			<result name="input">/login.jsp</result>
+	</action>
+	
+	
+	
+	</package>
+</struts>
